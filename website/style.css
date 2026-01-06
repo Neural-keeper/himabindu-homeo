@@ -1,0 +1,61 @@
+/* Color Scheme
+     #388087
+     #6FB3B8
+     #BADFE7
+     #C2EDCE
+     #F6F6F2
+     darkest -> lightest */
+
+
+body {
+    background: #F6F6F2;
+    scrollbar-width: none;
+    margin: 0;
+}
+
+.navbar {
+    background: #388087;
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    z-index: 999;
+    border-radius: 0px 0px 30px 30px;
+    width: 98vw;
+    justify-self: center;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #F6F6F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    height: 100%;
+}
+
