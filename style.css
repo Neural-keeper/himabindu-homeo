@@ -1,0 +1,145 @@
+/* Color Scheme
+     #388087
+     #6FB3B8
+     #BADFE7
+     #C2EDCE
+     #F6F6F2
+     darkest -> lightest */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-color: #F6F6F2;
+    color: #388087;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #388087;
+    top: 0;
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    z-index: 1000;
+    border-radius: 0px 0px 30px 30px;
+    width: 99.8vw;
+    justify-self: center;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #F6F6F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    color: #C2EDCE;
+    transition: all 0.3s ease;
+}
+
+/* Generic sections */
+.section {
+    height: 100vh;
+    background-color: #F6F6F2;
+}
+
+/* Generic Carousel (mainly for background */
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the whole area without distortion */
+    opacity: 0; /* Start all images hidden */
+    animation: fadeImgs 12s infinite; /* 12s total duration for 3 images (4s each) */
+}
+
+/* Delay the animation for subsequent images */
+.carousel-slider img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel-slider img:nth-child(2) {
+    animation-delay: 4s; /* Show after the first 4s */
+}
+
+.carousel-slider img:nth-child(3) {
+    animation-delay: 8s; /* Show after the next 4s */
+}
+
+@keyframes fadeImgs {
+    0% { opacity: 0; }
+    8% { opacity: 1; } /* Fade in */
+    25% { opacity: 1; } /* Stay visible */
+    33% { opacity: 0; } /* Fade out */
+    100% { opacity: 0; } /* Stay hidden until the next cycle */
+}
+
+
+/* LANDING */
+.landing {
+    font-size: 3vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure content is on top */
+    color: #C2EDCE;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    padding: 20px;
+    box-sizing: border-box
+}
+
+.landing h2 {
+    font-size: 20vh;
+    font-weight: 700;
+    font-style: normal;
+}
