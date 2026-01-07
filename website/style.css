@@ -17,6 +17,9 @@
 body {
     background-color: #F6F6F2;
     color: #388087;
+    scrollbar-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* NAVBAR */
@@ -31,7 +34,7 @@ body {
     font-size: 1.2rem;
     position: sticky;
     z-index: 1000;
-    border-radius: 0px 0px 30px 30px;
+    /* border-radius: 0px 0px 30px 30px; */
     width: 99.8vw;
     justify-self: center;
 }
@@ -77,6 +80,7 @@ body {
 .section {
     height: 100vh;
     background-color: #F6F6F2;
+    top: 0;
 }
 
 /* Generic Carousel (mainly for background */
@@ -113,8 +117,8 @@ body {
 @keyframes fadeImgs {
     0% { opacity: 0; }
     8% { opacity: 1; } /* Fade in */
-    25% { opacity: 1; } /* Stay visible */
-    33% { opacity: 0; } /* Fade out */
+    45% { opacity: 1; } /* Stay visible */
+    53% { opacity: 0; } /* Fade out */
     100% { opacity: 0; } /* Stay hidden until the next cycle */
 }
 
@@ -130,7 +134,7 @@ body {
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     z-index: 10; /* Ensure content is on top */
     color: #C2EDCE;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
@@ -142,4 +146,18 @@ body {
     font-size: 20vh;
     font-weight: 700;
     font-style: normal;
+    padding-left: 5vw;
+}
+
+.landing p {
+    text-align: left;
+    padding-left: 5vw;
+}
+
+.landing a {
+    text-decoration: none;
+}
+
+.landing a:hover {
+    color: #F6F6F2;
 }
