@@ -17,9 +17,9 @@
 body {
     background-color: #F6F6F2;
     color: #388087;
-    scrollbar-width: none;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -35,7 +35,7 @@ body {
     position: sticky;
     z-index: 1000;
     /* border-radius: 0px 0px 30px 30px; */
-    width: 99.8vw;
+    width: 100vw;
     justify-self: center;
 }
 
@@ -81,9 +81,14 @@ body {
     height: 100vh;
     background-color: #F6F6F2;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Generic Carousel (mainly for background */
+/* Generic Carousel (mainly for background) */
 .carousel-container {
     position: relative;
     width: 100vw;
@@ -143,7 +148,7 @@ body {
 }
 
 .landing h2 {
-    font-size: 20vh;
+    font-size: 10vw;
     font-weight: 700;
     font-style: normal;
     padding-left: 5vw;
@@ -152,6 +157,7 @@ body {
 .landing p {
     text-align: left;
     padding-left: 5vw;
+    font-size: 2vw;
 }
 
 .landing a {
@@ -160,4 +166,201 @@ body {
 
 .landing a:hover {
     color: #F6F6F2;
+}
+
+/* Regular Section */
+.left_container {
+    background-color: #F6F6F2;
+    width: 50%;
+    padding: 3rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.left_container h2 {
+    font-size: 5vw;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.left_container h3 {
+    font-size: 3vw;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.left_container p {
+    font-size: 1vw;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.right_container {
+    display: flex;
+}
+
+/* Fade in images */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.animated {
+    width: 400px;
+    height: 221px;
+    background-position: center;
+    background-size: color;
+}
+
+.fadeInLeft {
+    background-image: url("../assets/image1.jpg");
+    -webkit-animation: fadeInLeft 1.2s both;
+    -moz-animation: fadeInLeft 1.2s both;
+    -o-animation: fadeInLeft 1.2s both;
+    animation: fadeInLeft 1.2s both;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@-moz-keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+@-o-keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        -o-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    background-image: url("../assets/image3.jpg");
+    -webkit-animation: fadeInRight 1.2s both;
+    -moz-animation: fadeInRight 1.2s both;
+    -o-animation: fadeInRight 1.2s both;
+    animation: fadeInRight 1.2s both;
+}
+
+@-webkit-keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+@-moz-keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+@-o-keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        -o-transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInTop {
+    background-image: url("../assets/image2.jpg");
+    -webkit-animation: fadeInTop 1.2s both;
+    -moz-animation: fadeInTop 1.2s both;
+    -o-animation: fadeInTop 1.2s both;
+    animation: fadeInTop 1.2s both;
+}
+
+@-webkit-keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        -moz-transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@-o-keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        -o-transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+@keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
