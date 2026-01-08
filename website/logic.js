@@ -29,3 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+const track = document.querySelector('.track');
+const cards = document.querySelectorAll('.card');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+function update() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+next.addEventListener('click', () => {
+  index = (index + 1) % cards.length;
+  update();
+});
+
+prev.addEventListener('click', () => {
+  index = (index - 1 + cards.length) % cards.length;
+  update();
+});
+
+/* Optional auto-play */
+setInterval(() => {
+  index = (index + 1) % cards.length;
+  update();
+}, 6000);
