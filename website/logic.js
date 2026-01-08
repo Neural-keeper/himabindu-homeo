@@ -1,14 +1,3 @@
-// const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting){
-//             document.querySelectorAll(".animated")[0].classList.add("fadeInLeft")
-//             document.querySelectorAll(".animated")[1].classList.add("fadeInRight")
-//         }
-//     })
-// })
-
-// observer.observe(document.querySelector(".container"));
-
 document.addEventListener('DOMContentLoaded', () => {
     // Select all elements with the 'fade-section' class
     const fadeSections = document.querySelectorAll('.fade-section');
