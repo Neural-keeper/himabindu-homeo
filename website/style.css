@@ -159,13 +159,13 @@ section {
     font-size: 2vw;
 }
 
-.landing a {
+/* .landing a {
     text-decoration: none;
 }
 
 .landing a:hover {
     color: #F6F6F2;
-}
+} */
 
 .email-button {
     display: inline-block;
@@ -184,10 +184,24 @@ section {
     font-size: 2vw;
     max-width: fit-content;
     align-self: center;
+    position: relative;
 }
 
-.email-button:hover {
-    background-color: #0056b3;
+.email-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #388087;
+  border-color: #388087;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.email-button:hover::after {
+  width: 100%;
 }
 
 /* Fade in images */
@@ -415,4 +429,17 @@ img.sized {
     opacity: 1;
     transform: translateX(0); /* Move back to original position */
     transform: translateY(0);
+}
+
+.card {
+    width: 33vw;
+    height: 80vh;
+    background-color: rgba(186, 223, 231, 0.3);
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #388087;
+    align-items: center;
+    justify-content: center;
+    display: inline;
+    color: #388087;
 }
