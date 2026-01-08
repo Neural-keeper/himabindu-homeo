@@ -78,7 +78,6 @@ body {
 
 /* Generic sections */
 section {
-    height: 100vh;
     background-color: #F6F6F2;
     top: 0;
     display: flex;
@@ -381,6 +380,8 @@ img.sized {
     width: 50%;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Initial state for "from left" */
@@ -395,10 +396,11 @@ img.sized {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
     font-size: 3vw;
+    padding: 0, 0.3vw;
 }
 
 .fade-left p {
-    font-size: 1vw;
+    font-size: 1.5vw;
     align-self: left;
 }
 
@@ -414,16 +416,31 @@ img.sized {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
     font-size: 3vw;
+    padding: 0, 0.3vw;
 }
 
 .fade-right p {
-    font-size: 1vw;
+    font-size: 1.5vw;
     align-self: left;
 }
 
 .fade-top {
     transform: translateY(-50px);
+    justify-content: center;
+    text-align: center;
 }
+
+.fade-top h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    padding: 0, 0.3vw;
+}
+
+.fade-top p {
+    font-size: 1.5vw;
+}
+
 /* Final state (applied by JS when visible) */
 .fade-section.is-visible {
     opacity: 1;
