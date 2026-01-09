@@ -56,3 +56,17 @@ setInterval(() => {
   index = (index + 1) % cards.length;
   update();
 }, 6000);
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar__menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.navbar__links').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
